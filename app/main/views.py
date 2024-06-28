@@ -5,7 +5,8 @@ from app.extensions import db
 from app.models import Book, Borrow
 import datetime
 
-main_bp = Blueprint('main', __name__)
+main_bp = Blueprint('main', __name__,
+                    template_folder='templates', url_prefix='/')
 
 
 @main_bp.route('/books')
@@ -14,8 +15,9 @@ def book_details():
     return render_template('main/book_details.html', books=books)
 
 
-@main_bp.route('/')
+@main_bp.route('/home')
 def index():
+    print('shemovida')
     return render_template('main/index.html')
 
 

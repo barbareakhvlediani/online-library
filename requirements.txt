@@ -4,4 +4,5 @@ flask_admin
 flask_sqlalchemy
 flask_migrate
 Flask-Bcrypt
-Flask-Login
+Flask-login
+python-dotenv

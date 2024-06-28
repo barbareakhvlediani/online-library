@@ -37,4 +37,8 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
+    # with app.app_context():
+    #     print('createing database')
+    #     db.create_all()
+    #     print('created database')
     app.run(debug=True)
